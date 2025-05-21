@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige Pathways - Luxury Travel Experiences</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Scrolling Animation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">Prestige Pathways</span>
+                    <span class="logo-icon">✈️</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="booking.html" class="booking-btn">Book Now</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+            <button id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html" class="booking-btn">Book Now</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content (Will be different for each page) -->
+    <!-- After the header -->
+<main id="main-content">
+   <!-- Add this to your booking.html -->
+<section class="booking-section">
+    <div class="container">
+        <div class="booking-container animate-on-scroll">
+            <h1>Book Your Tour</h1>
+            <p class="section-subtitle">Complete your travel preferences</p>
+            
+            <form id="bookingForm">
+                <!-- Personal Information -->
+                <div class="form-group">
+                    <label for="fullName">Full Name*</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="city">Your City*</label>
+                    <input type="text" id="city" name="city" required placeholder="Where are you traveling from?">
+                </div>
+                
+                <!-- Tour Selection -->
+                <div class="form-group">
+                    <label for="tourName">Select Tour*</label>
+                    <select id="tourName" name="tourName" required>
+                        <option value="">-- Select a Tour --</option>
+                        <option value="European Grand Tour">European Grand Tour</option>
+                        <option value="Asian Adventure">Asian Adventure</option>
+                        <option value="African Safari">African Safari</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="travelDate">Preferred Travel Date*</label>
+                    <input type="date" id="travelDate" name="travelDate" required>
+                </div>
+                
+                <!-- Transportation Preferences -->
+                <div class="form-group">
+                    <label>Preferred Transportation*</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="transport" value="air" checked>
+                            <span class="radio-custom"></span>
+                            <i class="fas fa-plane"></i> By Air
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="transport" value="road">
+                            <span class="radio-custom"></span>
+                            <i class="fas fa-car"></i> By Road
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="transport" value="sea">
+                            <span class="radio-custom"></span>
+                            <i class="fas fa-ship"></i> By Sea
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Accommodation Preferences -->
+                <div class="form-group">
+                    <label>Accommodation Type*</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="accommodation" value="luxury-hotel">
+                            <span class="radio-custom"></span>
+                            <i class="fas fa-hotel"></i> Luxury Hotel
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="accommodation" value="boutique-hotel">
+                            <span class="radio-custom"></span>
+                            <i class="fas fa-building"></i> Boutique Hotel
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="accommodation" value="resort">
+                            <span class="radio-custom"></span>
+                            <i class="fas fa-umbrella-beach"></i> Resort
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="accommodation" value="motel">
+                            <span class="radio-custom"></span>
+                            <i class="fas fa-bed"></i> Motel
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Additional Information -->
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests</label>
+                    <textarea id="specialRequests" name="specialRequests" placeholder="Dietary restrictions, accessibility needs, etc."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary submit-btn">Complete Booking</button>
+            </form>
+        </div>
+    </div>
+</section>
+</main>
+
+    <!-- Footer with Map & Social Links -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Our Story</h3>
+                    <p>Prestige Pathways was founded in 2010 with a vision to create extraordinary travel experiences that go beyond the ordinary.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Lane, Travel City</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@prestigepathways.com</p>
+                </div>
+                
+                <div class="footer-map">
+                    <h3>Find Us</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215373510518!2d-73.987844924239!3d40.74844097138971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus" 
+                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Prestige Pathways. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
