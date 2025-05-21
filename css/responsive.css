@@ -1,0 +1,239 @@
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-nav ul {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 120px 0 80px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .tour-card, .gallery-item {
+        margin-bottom: 30px;
+    }
+    
+    .contact-container, .tour-detail-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-map {
+        grid-column: span 2;
+    }
+    
+    .booking-container, .about-content {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-map {
+        grid-column: span 1;
+    }
+    
+    .tour-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .mobile-menu {
+        width: 100%;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .main-header {
+        border-radius: 0; /* Full width on mobile */
+        width: 100%;
+        margin: 0;
+    }
+    
+    .main-nav {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .main-header .container {
+        padding: 15px 20px;
+    }
+}
+
+@media (min-width: 993px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* Responsive Booking Form */
+@media (max-width: 768px) {
+    .radio-group {
+        flex-direction: column;
+    }
+    
+    .booking-container {
+        padding: 30px 20px;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-header {
+        border-radius: 0;
+        width: 100%;
+        margin: 0;
+        background-color: var(--primary-color) !important;
+    }
+
+    .main-nav ul {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .main-header .container {
+        padding: 15px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .mobile-menu {
+        top: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 120px 0 80px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .tour-card,
+    .gallery-item {
+        margin-bottom: 30px;
+    }
+
+    .contact-container,
+    .tour-detail-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-map {
+        grid-column: span 2;
+    }
+
+    .booking-container,
+    .about-content {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-map {
+        grid-column: span 1;
+    }
+
+    .tour-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mobile-menu {
+        width: 100%;
+    }
+}
