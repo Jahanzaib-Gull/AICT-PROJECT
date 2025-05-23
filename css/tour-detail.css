@@ -1,0 +1,324 @@
+/* tour-detail.css */
+/* Base Styles */
+.tour-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: black;
+}
+
+
+[data-theme="dark"] .tour-detail-container,.tour-meta,.booking-form .form-group label{
+    color: white;
+}
+
+
+.tour-hero {
+    position: relative;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tour-hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.tour-header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+}
+
+.tour-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.tour-price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.tour-price span {
+    color: var(--accent-color);
+}
+
+.tour-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.tour-rating i {
+    color: var(--accent-color);
+}
+
+/* Quick Facts Section */
+.quick-facts {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    
+
+}
+
+@media (max-width: 768px) {
+    .quick-facts {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tour-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    align-content: start;
+  
+    
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.meta-item i {
+    color: var(--primary-color);
+    width: 1.5rem;
+    text-align: center;
+}
+
+.tour-description {
+    line-height: 1.7;
+}
+
+.tour-description p {
+    margin-bottom: 1rem;
+}
+
+/* Highlights Section */
+.highlights {
+    margin-bottom: 3rem;
+}
+
+.highlights h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.highlights h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+.highlights-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.highlights-list li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.highlights-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Itinerary Section */
+.itinerary {
+    margin-bottom: 3rem;
+}
+
+.itinerary h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary-color);
+    opacity: 0.2;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.timeline-day {
+    position: absolute;
+    left: -2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 0%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.timeline-content {
+    background: black;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-left: 1.5rem;
+    position: relative;
+    color: white;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--light-bg);
+}
+
+/* Inclusions Section */
+.inclusions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    .inclusions {
+        grid-template-columns: 1fr;
+    }
+}
+
+.included, .not-included {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.included h3 {
+    color: var(--success-color);
+}
+
+.not-included h3 {
+    color: var(--warning-color);
+}
+
+.included-list, .not-included-list {
+    list-style: none;
+    padding: 0;
+}
+
+.included-list li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.included-list li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.not-included-list li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.not-included-list li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    color: var(--warning-color);
+    font-weight: bold;
+}
+
+/* Practical Info Section */
+.practical-info {
+    margin-bottom: 3rem;
+}
+
+.info-item {
+    margin-bottom: 1.5rem;
+}
+
+.info-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .tour-hero img {
+        height: 300px;
+    }
+    
+    .tour-title {
+        font-size: 2rem;
+    }
+    
+    .tour-price {
+        font-size: 1.3rem;
+    }
+    
+    .highlights-list {
+        grid-template-columns: 1fr;
+    }
+}
