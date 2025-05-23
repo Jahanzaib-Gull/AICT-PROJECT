@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Header with Scrolling Animation -->
     <header class="main-header">
@@ -30,11 +32,11 @@
                 </ul>
             </nav>
             <div class="theme-toggle">
-            <button id="themeToggle" aria-label="Toggle dark mode">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-            </button>
-        </div>
+                <button id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
             <div class="mobile-menu-btn">
                 <span></span>
                 <span></span>
@@ -57,71 +59,316 @@
 
     <!-- Main Content (Will be different for each page) -->
 
-        <!-- Page-specific content goes here -->
-         <!-- After the header -->
-<main id="main-content">
-    <section class="tours-section">
-        <div class="container">
-            <h1 class="section-title page-title animate-on-scroll">Our Tour Collection</h1>
-            
-            <div class="tours-grid">
-                <!-- Repeat tour cards from homepage with more tours -->
-                <!-- Add 6-9 tour cards total -->
-                  <div class="tour-card animate-on-scroll delay-1"  data-tour-id="1">
-                    <div class="tour-image">
-                        <img src="images/tour-1.jpg" alt="European Grand Tour">
-                        <span class="tour-price">$3,499</span>
-                    </div>
-                    <div class="tour-info">
-                        <h3>European Grand Tour</h3>
-                        <p>14-day luxury journey through Europe's most iconic cities</p>
-                        <div class="tour-meta">
-                            <span><i class="fas fa-calendar-alt"></i> Jun 15-29</span>
-                            <span><i class="fas fa-users"></i> 8 spots left</span>
+    <!-- Page-specific content goes here -->
+    <!-- After the header -->
+    <main id="main-content">
+        <!-- Tours Section -->
+        <section class="tours-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Explore Pakistan's Wonders</h2>
+
+                <div class="tours-grid">
+                    <!-- Tour 1 -->
+                    <div class="tour-card animate-on-scroll delay-1" data-tour-id="1">
+                        <div class="tour-image">
+                            <img src="images/pakistan/hunza.jpg" alt="Hunza Valley">
+                            <span class="tour-price">$899</span>
                         </div>
-                        <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        <div class="tour-info">
+                            <h3>Hunza Valley Expedition</h3>
+                            <p>7-day cultural and adventure tour through the majestic Hunza Valley</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-mountain"></i> Adventure</span>
+                                <span><i class="fas fa-calendar-alt"></i> Apr-Oct</span>
+                                
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Tour 2 -->
+                    <div class="tour-card animate-on-scroll delay-2" data-tour-id="2">
+                        <div class="tour-image">
+                            <img src="images/pakistan/skardu.jpg" alt="Skardu">
+                            <span class="tour-price">$1,199</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Skardu & Shangrila</h3>
+                            <p>8-day journey to the gateway of the world's highest mountains</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-mountain"></i> Adventure</span>
+                                <span><i class="fas fa-calendar-alt"></i> May-Sep</span>
+                     
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Tour 3 -->
+                    <div class="tour-card animate-on-scroll delay-3" data-tour-id="3">
+                        <div class="tour-image">
+                            <img src="images/pakistan/swat.jpg" alt="Swat Valley">
+                            <span class="tour-price">$749</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Swat Valley Explorer</h5>
+                                <p>6-day tour of Pakistan's "Switzerland" with lush valleys and ancient sites</p>
+                                <div class="tour-meta">
+                                    <span><i class="fas fa-mountain"></i> Adventure</span>
+                                    <span><i class="fas fa-calendar-alt"></i> Mar-Nov</span>
+                                   
+                                </div>
+                                <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Tour 4 -->
+                    <div class="tour-card animate-on-scroll" data-tour-id="4">
+                        <div class="tour-image">
+                            <img src="images/pakistan/naran.jpg" alt="Naran Kaghan">
+                            <span class="tour-price">$699</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Naran Kaghan Adventure</h3>
+                            <p>5-day trip through the stunning Himalayan foothills</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-hiking"></i> Adventure</span>
+                                <span><i class="fas fa-calendar-alt"></i> Jun-Sep</span>
+                              
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Tour 5 -->
+                    <div class="tour-card animate-on-scroll delay-1" data-tour-id="5">
+                        <div class="tour-image">
+                            <img src="images/pakistan/multan.jpg" alt="Multan">
+                            <span class="tour-price">$599</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Multan Cultural Tour</h3>
+                            <p>4-day exploration of the City of Saints and Sufi shrines</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-history"></i> Historical</span>
+                                <span><i class="fas fa-calendar-alt"></i> Oct-Mar</span>
+                               
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Tour 6 -->
+                    <div class="tour-card animate-on-scroll delay-2" data-tour-id="6">
+                        <div class="tour-image">
+                            <img src="images/pakistan/mohenjodaro.jpg" alt="Mohenjo-Daro">
+                            <span class="tour-price">$549</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Mohenjo-Daro Discovery</h3>
+                            <p>3-day archaeological tour of the ancient Indus Valley civilization</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-history"></i> Historical</span>
+                                <span><i class="fas fa-calendar-alt"></i> Nov-Feb</span>
+                                
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Tour 7 -->
+                    <div class="tour-card animate-on-scroll delay-3" data-tour-id="7">
+                        <div class="tour-image">
+                            <img src="images/pakistan/fairy-meadows.jpg" alt="Fairy Meadows">
+                            <span class="tour-price">$1,099</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Fairy Meadows Trek</h3>
+                            <p>7-day hiking adventure with breathtaking views of Nanga Parbat</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-hiking"></i> Adventure</span>
+                                <span><i class="fas fa-calendar-alt"></i> Jun-Sep</span>
+                              
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Tour 8 -->
+                    <div class="tour-card animate-on-scroll" data-tour-id="8">
+                        <div class="tour-image">
+                            <img src="images/pakistan/lahore.jpg" alt="Lahore">
+                            <span class="tour-price">$499</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Lahore Heritage Walk</h3>
+                            <p>4-day cultural immersion in Pakistan's culinary and historical capital</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-history"></i> Historical</span>
+                                <span><i class="fas fa-calendar-alt"></i> Year-round</span>
+                                
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Tour 9 -->
+                    <div class="tour-card animate-on-scroll delay-1" data-tour-id="9">
+                        <div class="tour-image">
+                            <img src="images/pakistan/chitral.jpg" alt="Chitral">
+                            <span class="tour-price">$949</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Chitral & Kalash Valleys</h3>
+                            <p>6-day journey to meet the Kalash people and explore remote valleys</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-history"></i> Historical</span>
+                                <span><i class="fas fa-calendar-alt"></i> May-Oct</span>
+                                
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Tour 10 -->
+                    <div class="tour-card animate-on-scroll delay-2" data-tour-id="10">
+                        <div class="tour-image">
+                            <img src="images/pakistan/makran.jpg" alt="Makran Coast">
+                            <span class="tour-price">$1,299</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Makran Coastal Highway</h3>
+                            <p>8-day road trip along Pakistan's stunning Arabian Sea coastline</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-water"></i> Adventure</span>
+                                <span><i class="fas fa-calendar-alt"></i> Oct-Apr</span>
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="tour-card animate-on-scroll" data-tour-id="11">
+                        <div class="tour-image">
+                            <img src="images/pakistan/taxila.jpg" alt="Taxila Ruins">
+                            <span class="tour-price">$649</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Taxila Archaeological Journey</h3>
+                            <p>4-day exploration of Gandhara civilization's ancient Buddhist ruins</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-history"></i> Historical</span>
+                                <span><i class="fas fa-calendar-alt"></i> Sep-Apr</span>
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Historical Tour 2 -->
+                    <div class="tour-card animate-on-scroll delay-1"data-tour-id="12">
+                        <div class="tour-image">
+                            <img src="images/pakistan/rohtas.jpg" alt="Rohtas Fort">
+                            <span class="tour-price">$549</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Rohtas Fort Expedition</h3>
+                            <p>3-day tour of Sher Shah Suri's unconquered 16th century fortress</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-history"></i> Historical</span>
+                                <span><i class="fas fa-calendar-alt"></i> Oct-Mar</span>
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Historical Tour 3 -->
+                    <div class="tour-card animate-on-scroll delay-2"data-tour-id="13">
+                        <div class="tour-image">
+                            <img src="images/pakistan/makli.jpg" alt="Makli Necropolis">
+                            <span class="tour-price">$699</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Makli Necropolis Discovery</h3>
+                            <p>5-day tour of one of the world's largest funerary sites in Thatta</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-history"></i> Historical</span>
+                                <span><i class="fas fa-calendar-alt"></i> Nov-Feb</span>
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Historical Tour 4 -->
+                    <div class="tour-card animate-on-scroll delay-3"data-tour-id="14">
+                        <div class="tour-image">
+                            <img src="images/pakistan/harappa.jpg" alt="Harappa">
+                            <span class="tour-price">$599</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Harappa Civilization Tour</h3>
+                            <p>4-day journey to the sister city of Mohenjo-Daro</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-history"></i> Historical</span>
+                                <span><i class="fas fa-calendar-alt"></i> Oct-Apr</span>
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Historical Tour 5 -->
+                    <div class="tour-card animate-on-scroll"data-tour-id="15">
+                        <div class="tour-image">
+                            <img src="images/pakistan/bahawalpur.jpg" alt="Derawar Fort">
+                            <span class="tour-price">$799</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Cholistan Desert Forts</h3>
+                            <p>6-day exploration of Derawar and desert fortress network</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-history"></i> Historical</span>
+                                <span><i class="fas fa-calendar-alt"></i> Nov-Mar</span>
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Adventure Tour 1 -->
+                    <div class="tour-card animate-on-scroll delay-1"data-tour-id="16">
+                        <div class="tour-image">
+                            <img src="images/pakistan/k2.jpg" alt="K2 Base Camp">
+                            <span class="tour-price">$2,499</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>K2 Base Camp Trek</h3>
+                            <p>14-day challenging trek to the foot of the world's 2nd highest peak</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-mountain"></i> Adventure</span>
+                                <span><i class="fas fa-calendar-alt"></i> Jun-Aug</span>
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Adventure Tour 5 -->
+                    <div class="tour-card animate-on-scroll delay-1"data-tour-id="20">
+                        <div class="tour-image">
+                            <img src="images/pakistan/deosai.jpg" alt="Deosai Plains">
+                            <span class="tour-price">$1,299</span>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Deosai National Park Trek</h3>
+                            <p>8-day hike through the "Land of Giants" above 4,000m</p>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-paw"></i> Adventure</span>
+                                <span><i class="fas fa-calendar-alt"></i> Jul-Sep</span>
+                            </div>
+                            <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Tour Card 2 -->
-                <div class="tour-card animate-on-scroll delay-2" data-tour-id="2">
-                    <div class="tour-image">
-                        <img src="images/tour-2.jpg" alt="Asian Adventure">
-                        <span class="tour-price">$4,199</span>
-                    </div>
-                    <div class="tour-info">
-                        <h3>Asian Adventure</h3>
-                        <p>Explore the exotic wonders of Southeast Asia in style</p>
-                        <div class="tour-meta">
-                            <span><i class="fas fa-calendar-alt"></i> Aug 5-20</span>
-                            <span><i class="fas fa-users"></i> 5 spots left</span>
-                        </div>
-                        <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
-                    </div>
-                </div>
-                
-                <!-- Tour Card 3 -->
-                <div class="tour-card animate-on-scroll delay-3" data-tour-id="3">
-                    <div class="tour-image">
-                        <img src="images/tour-3.jpg" alt="African Safari">
-                        <span class="tour-price">$5,799</span>
-                    </div>
-                    <div class="tour-info">
-                        <h3>African Safari</h3>
-                        <p>Luxury wildlife experience in the heart of Africa</p>
-                        <div class="tour-meta">
-                            <span><i class="fas fa-calendar-alt"></i> Sep 10-25</span>
-                            <span><i class="fas fa-users"></i> 3 spots left</span>
-                        </div>
-                        <a href="tour-detail.html" class="btn btn-secondary">View Details</a>
-                    </div>
-                </div>
+
             </div>
-            </div>
-        </div>
-    </section>
-</main>
-    
+        </section>
+    </main>
+
 
     <!-- Footer with Map & Social Links -->
     <footer class="main-footer">
@@ -129,7 +376,8 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <h3>Our Story</h3>
-                    <p>Prestige Pathways was founded in 2010 with a vision to create extraordinary travel experiences that go beyond the ordinary.</p>
+                    <p>Prestige Pathways was founded in 2010 with a vision to create extraordinary travel experiences
+                        that go beyond the ordinary.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -137,7 +385,7 @@
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
@@ -148,23 +396,24 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-contact">
                     <h3>Contact Us</h3>
                     <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Lane, Travel City</p>
                     <p><i class="fas fa-phone"></i> +1 234 567 890</p>
                     <p><i class="fas fa-envelope"></i> info@prestigepathways.com</p>
                 </div>
-                
+
                 <div class="footer-map">
                     <h3>Find Us</h3>
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215373510518!2d-73.987844924239!3d40.74844097138971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus" 
-                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215373510518!2d-73.987844924239!3d40.74844097138971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus"
+                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2025 Prestige Pathways. All rights reserved.</p>
             </div>
@@ -174,4 +423,5 @@
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
 </body>
+
 </html>

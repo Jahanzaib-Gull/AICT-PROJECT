@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/tour-detail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -56,46 +57,53 @@
     </div>
 
     <!-- Main Content (Will be different for each page) -->
-    <section class="tour-detail-section">
-    <div class="container">
-        <div class="tour-detail-container">
-            <div class="tour-detail-image">
-                <img src="" alt="">
+    <main class="tour-detail-container">
+        <!-- Hero Section -->
+        <section class="tour-hero">
+            <img src="" alt="" class="tour-image">
+            <div class="tour-header">
+                <h1 class="tour-title"></h1>
+                <div class="tour-price"></div>
+                <div class="tour-rating"></div>
             </div>
-            
-            <div class="tour-detail-info">
-                <h2></h2>
-                <div class="tour-price-large"></div>
-                
-                <div class="tour-description"></div>
-                
-                <div class="tour-highlights">
-                    <h3>Tour Highlights</h3>
-                    <ul></ul>
-                </div>
-                
-                <div class="tour-meta-detail">
-                    <div class="tour-meta-item">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span></span>
-                    </div>
-                    <div class="tour-meta-item">
-                        <i class="fas fa-users"></i>
-                        <span></span>
-                    </div>
-                    <div class="tour-meta-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span></span>
-                    </div>
-                </div>
-                
-                <div class="tour-dates"></div>
-                
-                <a href="booking.html" class="btn btn-primary book-now-btn">Book Now</a>
+        </section>
+
+        <!-- Quick Facts -->
+        <section class="quick-facts">
+            <div class="tour-meta"></div>
+            <div class="tour-description"></div>
+        </section>
+
+        <!-- Highlights -->
+        <section class="highlights">
+            <h2>Tour Highlights</h2>
+            <ul class="highlights-list"></ul>
+        </section>
+
+        <!-- Available Dates -->
+        <section class="available-dates"></section>
+
+        <!-- Itinerary -->
+        <section class="itinerary"></section>
+
+        <!-- Inclusions/Exclusions -->
+        <section class="inclusions">
+            <div class="included">
+                <h3>What's Included</h3>
+                <ul class="included-list"></ul>
             </div>
-        </div>
-    </div>
-</section>
+            <div class="not-included">
+                <h3>What's Not Included</h3>
+                <ul class="not-included-list"></ul>
+            </div>
+        </section>
+
+        <!-- Practical Information -->
+        <section class="practical-info"></section>
+
+        <a href="booking.html" class="btn btn-primary">Book tour</a>
+        
+         </main>
 
     <!-- Footer with Map & Social Links -->
     <footer class="main-footer">
@@ -147,6 +155,7 @@
 
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+
     <!-- Add this script tag to your tour-detail.html -->
 <script src="js/tour-data.js"></script>
 <script src="js/tour-detail.js"></script>

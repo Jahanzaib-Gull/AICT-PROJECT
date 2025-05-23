@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/booking.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -57,113 +58,198 @@
 
     <!-- Main Content (Will be different for each page) -->
     <!-- After the header -->
-<main id="main-content">
-   <!-- Add this to your booking.html -->
-<section class="booking-section">
-    <div class="container">
-        <div class="booking-container animate-on-scroll">
-            <h1>Book Your Tour</h1>
-            <p class="section-subtitle">Complete your travel preferences</p>
-            
-            <form id="bookingForm">
-                <!-- Personal Information -->
-                <div class="form-group">
-                    <label for="fullName">Full Name*</label>
-                    <input type="text" id="fullName" name="fullName" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address*</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number*</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="city">Your City*</label>
-                    <input type="text" id="city" name="city" required placeholder="Where are you traveling from?">
-                </div>
-                
-                <!-- Tour Selection -->
-                <div class="form-group">
-                    <label for="tourName">Select Tour*</label>
-                    <select id="tourName" name="tourName" required>
-                        <option value="">-- Select a Tour --</option>
-                        <option value="European Grand Tour">European Grand Tour</option>
-                        <option value="Asian Adventure">Asian Adventure</option>
-                        <option value="African Safari">African Safari</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="travelDate">Preferred Travel Date*</label>
-                    <input type="date" id="travelDate" name="travelDate" required>
-                </div>
-                
-                <!-- Transportation Preferences -->
-                <div class="form-group">
-                    <label>Preferred Transportation*</label>
-                    <div class="radio-group">
-                        <label class="radio-option">
-                            <input type="radio" name="transport" value="air" checked>
-                            <span class="radio-custom"></span>
-                            <i class="fas fa-plane"></i> By Air
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="transport" value="road">
-                            <span class="radio-custom"></span>
-                            <i class="fas fa-car"></i> By Road
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="transport" value="sea">
-                            <span class="radio-custom"></span>
-                            <i class="fas fa-ship"></i> By Sea
-                        </label>
+ <main id="main-content">
+        <!-- Booking Progress Indicator -->
+        <section class="booking-progress">
+            <div class="container">
+                <ul class="progress-steps">
+                    <li class="active"><span>1</span> Tour Selection</li>
+                    <li><span>2</span> Traveler Details</li>
+                    <li><span>3</span> Payment</li>
+                    <li><span>4</span> Confirmation</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-grid">
+                    <!-- Booking Form -->
+                    <div class="booking-form-container animate-on-scroll">
+                        <h1>Book Your Adventure</h1>
+                        
+                        <form id="bookingForm" class="booking-form">
+                            <input type="hidden" id="tourId" name="tourId">
+                            
+                            <!-- Tour Summary -->
+                            <div class="form-section tour-summary">
+                                <h3><i class="fas fa-map-marked-alt"></i> Tour Details</h3>
+                                <div class="summary-content">
+                                    <div id="selectedTourDisplay">
+                                        <p>Please select a tour from our <a href="tours.html">tours page</a> or choose below:</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tourSelect">Or select a tour:</label>
+                                        <select id="tourSelect" name="tourSelect" class="tour-select">
+                                            <option value="">-- Select a Tour --</option>
+                                            <!-- Options will be populated by JavaScript -->
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Date Selection -->
+                            <div class="form-section">
+                                <h3><i class="fas fa-calendar-alt"></i> Travel Dates</h3>
+                                <div class="form-group">
+                                    <label for="tourDate">Select Date*</label>
+                                    <select id="tourDate" name="tourDate" required>
+                                        <option value="">-- Available Dates --</option>
+                                        <!-- Dates will be populated by JavaScript -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="participants">Number of Participants*</label>
+                                    <div class="quantity-selector">
+                                        <button type="button" class="quantity-btn" id="decreaseParticipants">-</button>
+                                        <input type="number" id="participants" name="participants" min="1" max="20" value="1" required>
+                                        <button type="button" class="quantity-btn" id="increaseParticipants">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Traveler Information -->
+                            <div class="form-section">
+                                <h3><i class="fas fa-user"></i> Traveler Information</h3>
+                                <div class="form-group">
+                                    <label for="fullName">Full Name*</label>
+                                    <input type="text" id="fullName" name="fullName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address*</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number*</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nationality">Nationality*</label>
+                                    <input type="text" id="nationality" name="nationality" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="passport">Passport Number (for international tours)</label>
+                                    <input type="text" id="passport" name="passport">
+                                </div>
+                            </div>
+                            
+                            <!-- Accommodation Preferences -->
+                            <div class="form-section">
+                                <h3><i class="fas fa-bed"></i> Accommodation</h3>
+                                <div class="form-group">
+                                    <label>Room Preference*</label>
+                                    <div class="radio-group">
+                                        <label class="radio-option">
+                                            <input type="radio" name="roomType" value="single" checked>
+                                            <span class="radio-custom"></span>
+                                            Single Room
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="roomType" value="double">
+                                            <span class="radio-custom"></span>
+                                            Double Room
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="roomType" value="twin">
+                                            <span class="radio-custom"></span>
+                                            Twin Room
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dietary">Dietary Requirements</label>
+                                    <input type="text" id="dietary" name="dietary" placeholder="Vegetarian, allergies, etc.">
+                                </div>
+                            </div>
+                            
+                            <!-- Emergency Contact -->
+                            <div class="form-section">
+                                <h3><i class="fas fa-phone-alt"></i> Emergency Contact</h3>
+                                <div class="form-group">
+                                    <label for="emergencyName">Full Name*</label>
+                                    <input type="text" id="emergencyName" name="emergencyName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="emergencyPhone">Phone Number*</label>
+                                    <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="emergencyRelation">Relationship*</label>
+                                    <input type="text" id="emergencyRelation" name="emergencyRelation" required>
+                                </div>
+                            </div>
+                            
+                            <!-- Special Requests -->
+                            <div class="form-section">
+                                <h3><i class="fas fa-clipboard-list"></i> Special Requests</h3>
+                                <div class="form-group">
+                                    <textarea id="specialRequests" name="specialRequests" placeholder="Accessibility needs, special arrangements, etc."></textarea>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <i class="fas fa-lock"></i> Proceed to Payment
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Booking Summary -->
+                    <div class="booking-summary animate-on-scroll delay-1">
+                        <h3>Your Booking Summary</h3>
+                        <div class="summary-card">
+                            <div class="summary-image" id="summaryTourImage">
+                                <img src="images/default-tour.jpg" alt="Tour image">
+                            </div>
+                            <div class="summary-details">
+                                <h4 id="summaryTourName">No tour selected</h4>
+                                <div class="summary-meta">
+                                    <p><i class="fas fa-calendar-alt"></i> <span id="summaryTourDate">Select a date</span></p>
+                                    <p><i class="fas fa-users"></i> <span id="summaryParticipants">1</span> participant(s)</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> <span id="summaryTourDuration">-</span></p>
+                                </div>
+                                <div class="price-breakdown">
+                                    <div class="price-row">
+                                        <span>Tour Price x<span id="summaryParticipantsDisplay">1</span>:</span>
+                                        <span id="summaryBasePrice">$0</span>
+                                    </div>
+                                    <div class="price-row">
+                                        <span>Single Supplement:</span>
+                                        <span id="summarySingleSupplement">$0</span>
+                                    </div>
+                                    <div class="price-row total">
+                                        <span>Total:</span>
+                                        <span id="summaryTotalPrice">$0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="cancellation-policy">
+                            <h4>Cancellation Policy</h4>
+                            <p id="summaryCancellationPolicy">Please select a tour to view cancellation policy.</p>
+                        </div>
+                        
+                        <div class="need-help">
+                            <h4>Need Help?</h4>
+                            <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                            <p><i class="fas fa-envelope"></i> bookings@prestigepathways.com</p>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Accommodation Preferences -->
-                <div class="form-group">
-                    <label>Accommodation Type*</label>
-                    <div class="radio-group">
-                        <label class="radio-option">
-                            <input type="radio" name="accommodation" value="luxury-hotel">
-                            <span class="radio-custom"></span>
-                            <i class="fas fa-hotel"></i> Luxury Hotel
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="accommodation" value="boutique-hotel">
-                            <span class="radio-custom"></span>
-                            <i class="fas fa-building"></i> Boutique Hotel
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="accommodation" value="resort">
-                            <span class="radio-custom"></span>
-                            <i class="fas fa-umbrella-beach"></i> Resort
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="accommodation" value="motel">
-                            <span class="radio-custom"></span>
-                            <i class="fas fa-bed"></i> Motel
-                        </label>
-                    </div>
-                </div>
-                
-                <!-- Additional Information -->
-                <div class="form-group">
-                    <label for="specialRequests">Special Requests</label>
-                    <textarea id="specialRequests" name="specialRequests" placeholder="Dietary restrictions, accessibility needs, etc."></textarea>
-                </div>
-                
-                <button type="submit" class="btn btn-primary submit-btn">Complete Booking</button>
-            </form>
-        </div>
-    </div>
-</section>
-</main>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer with Map & Social Links -->
     <footer class="main-footer">
@@ -215,5 +301,9 @@
 
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/tour-data.js"></script>
+
+
 </body>
 </html>
