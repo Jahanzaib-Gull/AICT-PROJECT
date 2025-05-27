@@ -7,7 +7,7 @@ const tours = [
         duration: "7 days",
         groupSize: "12 max",
         destinations: "Hunza Valley",
-        image: "images/pakistan/hunza.jpg",
+        image: "images/pakistan/hunza.png",
         description: "7-day cultural and adventure tour through the majestic Hunza Valley with breathtaking mountain views and rich cultural experiences.",
         difficultyLevel: "Moderate",
         included: [

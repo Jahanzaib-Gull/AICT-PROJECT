@@ -203,8 +203,36 @@ document.addEventListener('DOMContentLoaded', function() {
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
     });
+    const API_KEY = 'BKU6o6iIW6Hm46dKDK8p0hj02xSR2atxVHKQjy7hcb9M2VW0qUiZ68ky'; // Replace this with your actual key
+
+    fetch('https://api.pexels.com/v1/search?query=tourist+scenery&orientation=landscape&per_page=1&page=' + Math.floor(Math.random() * 50), {
+      headers: {
+        Authorization: API_KEY
+      }
+    })
+    .then(res => res.json())
+    .then(data => {
+      const photo = data.photos[0];
+      if (photo && photo.src && photo.src.original) {
+        const img = new Image();
+        img.src = photo.src.landscape;
+
+        img.onload = () => {
+            const hero = document.querySelector('.hero');
+            hero.style.backgroundImage = `url('${img.src}')`;
+        };
+        
+      }
+      else {
+        const hero = document.querySelector('.hero');
+        hero.style.backgroundImage = `url('images/hero-bg.jpg')`;
+      }
+      
+    })
+    .catch(err => {
+      console.error("Failed to load image from Pexels:", err);
+    });
     
-    // Rest of your existing JavaScript...
 });
 // Add to your theme detection in main.js
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
