@@ -814,7 +814,7 @@ const tours = [
         category: "Adventure"
     },
     {
-        id: 17,
+        id: 20,
         title: "Deosai National Park Trek",
         price: 1299,
         duration: "8 days",
